@@ -144,16 +144,16 @@ Compilado com `--release`. Cada cenário usa 5 compras por cliente, com notas e 
 
 |Clientes|Produtos|Compras (arestas)|Construção do grafo|BFS (por consulta)|DFS (por consulta)|
 |-:|-:|-:|-:|-:|-:|
-|1.000|500|4.977|1,1 ms|17,8 µs|18,3 µs|
-|10.000|2.000|49.951|12,2 ms|54,9 µs|58,1 µs|
-|100.000|10.000|499.891|184,8 ms|204,5 µs|173,7 µs|
-|500.000|50.000|2.499.886|1.751,9 ms|276,7 µs|259,6 µs|
+|1.000|500|4.977|1,1 ms|16,7 µs|13,8 µs|
+|10.000|2.000|49.951|11,2 ms|36,4 µs|38,2 µs|
+|100.000|10.000|499.891|117,2 ms|106,1 µs|97,1 µs|
+|500.000|50.000|2.499.886|1.038,9 ms|126,1 µs|116,5 µs|
 
-Medido em uma máquina Linux com CPU Xeon 2,8 GHz. Em outro computador os valores mudam, e entre uma rodada e outra há variação de 10% a 20%.
+Medido neste PC, com Windows, pelo comando `cargo run --release -- benchmark`. Entre uma rodada e outra há variação de 10% a 20%.
 
 **Leitura dos resultados:**
 
-* Os dados cresceram 500 vezes (de \~5 mil para \~2,5 milhões de compras), mas o tempo de **uma recomendação** cresceu só cerca de 15 vezes. A busca explora apenas a vizinhança do cliente (3 níveis), e não o grafo inteiro.
+* Os dados cresceram 500 vezes (de \~5 mil para \~2,5 milhões de compras), mas o tempo de **uma recomendação** cresceu só cerca de 8 vezes. A busca explora apenas a vizinhança do cliente (3 níveis), e não o grafo inteiro.
 * A **construção** cresce de forma aproximadamente linear com o número de compras.
 * **BFS e DFS têm tempos praticamente iguais** (as diferenças ficam dentro da variação entre rodadas). Isso é esperado: com profundidade limitada, as duas visitam exatamente os mesmos vértices, e só muda se o container é fila ou pilha.
 
