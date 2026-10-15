@@ -4,7 +4,7 @@ Projeto acadêmico (Estruturas de Dados) desenvolvido em **Rust puro**, sem nenh
 
 * **Aluno:** *Kairê Gustavo de Oliveira  RA 186339*
 * **Curso:** Análise e Desenvolvimento de Sistemas — UniFECAF
-* **Vídeo pitch:** *(cole aqui o link não listado do YouTube)*
+* **Vídeo pitch:** https://youtu.be/7r96ltPw7y8
 
 ## 1\. Objetivo
 
